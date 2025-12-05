@@ -21,4 +21,21 @@ public class Pinguino implements Volatile{
     public void vola() {
         System.out.println("Io non so volare");
     }
+
+    @Override
+    public boolean eUgualeA(Volatile input) {
+        return this.equals(input);
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()){
+            return false;
+        }
+        Pinguino p = (Pinguino) o;
+        return this.continenteAppartenenza.equals(p.continenteAppartenenza);
+    }
 }

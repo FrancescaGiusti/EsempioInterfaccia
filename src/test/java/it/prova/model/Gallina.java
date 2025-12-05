@@ -21,4 +21,21 @@ public class Gallina implements Volatile{
     public void vola() {
         System.out.println("Io saltello");
     }
+
+    @Override
+    public boolean eUgualeA(Volatile input) {
+        return this.equals(input);
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()){
+            return false;
+        }
+        Gallina g = (Gallina) o;
+        return this.piumaggio.equals(g.piumaggio);
+    }
 }
