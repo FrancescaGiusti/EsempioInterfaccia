@@ -32,10 +32,10 @@ public class Gallina implements Volatile{
         if (this == o){
             return true;
         }
-        if (o == null || this.getClass() != o.getClass()){
+        if (!(o instanceof Gallina)){
             return false;
         }
         Gallina g = (Gallina) o;
-        return this.piumaggio.equals(g.piumaggio);
+        return this.piumaggio.equals(g.getPiumaggio());
     }
 }

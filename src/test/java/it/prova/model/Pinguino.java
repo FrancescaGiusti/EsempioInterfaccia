@@ -32,10 +32,10 @@ public class Pinguino implements Volatile{
         if (this == o){
             return true;
         }
-        if (o == null || this.getClass() != o.getClass()){
+        if (!(o instanceof Pinguino)){
             return false;
         }
         Pinguino p = (Pinguino) o;
-        return this.continenteAppartenenza.equals(p.continenteAppartenenza);
+        return this.continenteAppartenenza.equals(p.getContinenteAppartenenza());
     }
 }

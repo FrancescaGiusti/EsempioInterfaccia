@@ -32,11 +32,11 @@ public class Aquila implements Volatile{
         if (this == o){
             return true;
         }
-        if (o == null || this.getClass() != o.getClass()){
+        if (!(o instanceof Aquila)){
             return false;
         }
         Aquila a = (Aquila) o;
-        return this.razza.equals(a.razza);
+        return this.razza.equals(a.getRazza());
     }
 
 }
