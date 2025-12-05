@@ -25,6 +25,9 @@ public class TestVolatile {
         boolean risposta1 = a1.eUgualeA(a2);
         System.out.println("Le due aquile sono uguali? " + risposta1);
         Volatile g1 = new Gallina("Rosso");
+        Volatile g2 = new Gallina("Bianco");
+        boolean risposta3 = g1.eUgualeA(g2);
+        System.out.println("Le due galline sono uguali? " + risposta3);
         boolean risposta2 = a1.eUgualeA(g1);
         System.out.println("L'aquila e la gallina sono uguali? " + risposta2);
 
